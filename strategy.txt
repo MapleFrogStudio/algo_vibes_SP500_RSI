@@ -1,0 +1,35 @@
+1) Stock Close Price is aboiuve 200 SMA
+
+2) Buy decision if
+10-perdiod RSI of the stock is below 30
+- Buy on the next day's open
+
+3) Sell decision if
+10-period RSI is above 40 OR after 10 trading days (10 days in position)
+- Sell on the next d'ay's open
+
+Testing on ALL 505 single S&P stocks
+
+
+CALCULATIONG RSI
+Step 1: Calculate Up & Down Moves
+UpMoves : 
+- Take the daily return if return is positive
+- Take 0 if daily return is negative or zero
+DownMoves:
+- Absolute value of daily return if return is negative
+- Zero if return is positive or zero
+
+Step 2: Averaging Up & Down Moves
+1. Pick an average method : Simple moving average (SMA), exponetial moving average (EMA)
+2. We will take the Wilder's smooting Method (WSM) which is the same as an exponetial moving average but with different smoothing factor
+- Smooting factor in exponential moving average: alpha = 2 / (N + 1)  where N is RSI Period (10 for us)
+- Smooting factor in WSM: alpha = 1/N where N is 19 
+
+Step 3: RS and RSI calculation
+- RS = Average Up move / Average Down move
+- RSI = 100 - 100 / (1 + RS)
+
+
+
+

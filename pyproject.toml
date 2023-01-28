@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Algovibes_RSI_Strategy"
+version = "0.0.1"
+authors = [
+    {name = "Maple Frog Studio", email = "devops@maplefrogstudio.com"},
+]
+description = "implementation of a video trading strategy from Algovibes"
+requires-python = ">=3.11"
+dependencies = [
+    "yfinance",
+    "pandas",
+    "jupyter",
+    "matplotlib"
+]
