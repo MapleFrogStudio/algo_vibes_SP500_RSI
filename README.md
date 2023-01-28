@@ -7,6 +7,10 @@ Followed by a loggin of trades (tried to remove trades that were generate when a
 Analysis is done on the trades log  
   
 RESULTS:  
-Awful, I loss of -6000$, so needs to be tweeked.  
+Awful result, needs to be tweeked.  
 Hope it's not a logic error in my code :)  
+  
+Winners: 5473 for $14724.65 amount  
+Loosers: 4201 for $-21334.31 amount  
+Profit: $-6609.66    
 
