@@ -1,6 +1,7 @@
 # Algovibes strategy trial  
 
 #### ref: [https://www.youtube.com/watch?v=ZXCSPC3Kw18](https://www.youtube.com/watch?v=ZXCSPC3Kw18)  
+#### kaggle: [https://www.kaggle.com/code/poivronjaune/sp500-daily/edit](https://www.kaggle.com/code/poivronjaune/sp500-daily/edit)
   
 Used this RSI strategy to generate nuy & sell signals  
 Followed by a loggin of trades (tried to remove trades that were generate when already in position)  
