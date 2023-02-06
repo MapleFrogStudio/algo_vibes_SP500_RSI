@@ -13,6 +13,7 @@ requires-python = ">=3.11"
 dependencies = [
     "yfinance",
     "pandas",
+    "pandas-ta",
     "jupyter",
     "matplotlib"
 ]
