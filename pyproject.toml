@@ -15,5 +15,7 @@ dependencies = [
     "pandas",
     "pandas-ta",
     "jupyter",
-    "matplotlib"
+    "pytest",
+    "pep8",
+    "black"
 ]
