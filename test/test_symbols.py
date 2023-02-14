@@ -1,4 +1,4 @@
-from pkg import symbols
+from pkg.trading import symbols
 
 def assert_valid_SP500(data):
     assert data is not None

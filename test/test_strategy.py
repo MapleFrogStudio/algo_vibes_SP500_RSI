@@ -1,5 +1,5 @@
 import pytest
-from pkg import symbols, yahoo, strategy
+from pkg.trading import symbols, yahoo, strategy
 
 @pytest.fixture
 def raw_data():

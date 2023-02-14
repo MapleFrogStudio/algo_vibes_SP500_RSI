@@ -1,4 +1,4 @@
-from pkg import yahoo
+from pkg.trading import yahoo
 
 def test_yahoo_prices():
     tickers = ['TSLA', 'AAPL']

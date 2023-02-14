@@ -14,4 +14,6 @@ Hope it's not a logic error in my code :)
 Winners: 5473 for $14724.65 amount  
 Loosers: 4201 for $-21334.31 amount  
 Profit: $-6609.66    
-
+.  
+.  
+To investigate: [https://dev.to/lemon-markets/10-useful-python-libraries-packages-for-automated-trading-4fbm](https://dev.to/lemon-markets/10-useful-python-libraries-packages-for-automated-trading-4fbm)  

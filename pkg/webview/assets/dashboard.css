@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.full-screen {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    background-color: pink; 
+}
+
+.graphs_2col_area {
+    display: flex;
+    gap: 0px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+
+    height: 120vh;
+    width: 100%;
+    background-color: orange;
+    color: white;
+}
+
+.left_graph {
+    flex-grow: 5;
+    background-color: yellow;
+    align-self:flex-start;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    max-width: 75%;
+}
+
+.right_graph {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: blue;
+    padding: 10px;
+}
+
+.stacked {
+    background-color: brown;
+    align-self: center;
+    height: 5vh;
+}
+
+
+.footer {
+    background-color: pink;
+}
