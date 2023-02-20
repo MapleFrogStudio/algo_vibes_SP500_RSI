@@ -9,9 +9,10 @@ def grab_from_HTML_file():
     # wiki_url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies'
     # wiki_url = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies#S&P_500_component_stocks'
     tickers = pd.read_html("./tickers.html")[0]
-    #tickers = tickers.Symbol.to_list()
+    tickers_df = tickers[0]
+    tickers_df['Yahoo'] = [s.replace('.', '-') for s in tickers_df.Symbol]
 
-    return tickers
+    return tickers_df
 
 
 def grab_SP500_from_wikipedia():
@@ -20,12 +21,13 @@ def grab_SP500_from_wikipedia():
 
     s = requests.get(wiki_url).content
     tickers = pd.read_html(io.StringIO(s.decode("utf-8")))
-
-    return tickers[0]
+    tickers_df = tickers[0]
+    tickers_df['Yahoo'] = [s.replace('.', '-') for s in tickers_df.Symbol]
+    return tickers_df
 
 
 def grab_SP500_from_github_mfs_dataset():
     url = "https://raw.githubusercontent.com/MapleFrogStudio/DATASETS/main/STOCK_SYMBOLS/CSV/sp500.csv"
-    tickers = pd.read_csv(url, header=0, index_col=None)
-
-    return tickers
+    tickers_df = pd.read_csv(url, header=0, index_col=None)
+    tickers_df['Yahoo'] = [s.replace('.', '-') for s in tickers_df.Symbol]
+    return tickers_df

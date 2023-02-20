@@ -17,5 +17,7 @@ dependencies = [
     "jupyter",
     "pytest",
     "pep8",
-    "black"
+    "black",
+    "Cython",
+    "pyarrow",
 ]

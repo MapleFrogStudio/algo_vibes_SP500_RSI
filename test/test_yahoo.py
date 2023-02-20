@@ -19,3 +19,8 @@ def test_yahoo_prices_with_list_of_one():
     prices_df = yahoo.yahoo_prices(tickers, current_day)
     assert prices_df is None
 
+def test_yahoo_minute_prices():
+    tickers = ['TSLA', 'AAPL']
+    prices_df = yahoo.yahoo_minute_prices(tickers)
+    print(prices_df.loc[prices_df.Symbol == 'TSLA'].tail(10))
+    assert prices_df is not None

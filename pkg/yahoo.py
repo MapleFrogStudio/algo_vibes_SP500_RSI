@@ -23,4 +23,17 @@ def yahoo_prices(tickers, current_day):
     data.set_index('Date', inplace=True)
     return data
 
-print('Yahoo_prices function defined...') 
+def yahoo_minute_prices(tickers):
+    if not isinstance(tickers,list):
+        return None
+    if len(tickers) <= 1:
+        return None
+    
+    data = yf.download(tickers, interval="1m", period='max')
+    data = data.loc[(slice(None)),(slice(None),slice(None))].copy()
+    data = data.stack()
+    data = data.reset_index()
+    data.rename(columns={'level_1': 'Symbol'}, inplace=True)
+    data.set_index('Datetime', inplace=True)
+    return data
+
