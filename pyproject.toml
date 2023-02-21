@@ -14,7 +14,7 @@ authors = [
     {name = "Maple Frog Studio", email = "devops@maplefrogstudio.com"},
 ]
 description = "implementation of a video trading strategy from Algovibes"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "yfinance",
     "pyarrow",
