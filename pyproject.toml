@@ -2,6 +2,11 @@
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pkg*"]
+namespaces = false
+
 [project]
 name = "Algovibes_RSI_Strategy"
 version = "0.0.1"
@@ -12,10 +17,11 @@ description = "implementation of a video trading strategy from Algovibes"
 requires-python = ">=3.11"
 dependencies = [
     "yfinance",
+    "pyarrow",
     "pandas",
     "pandas-ta",
     "jupyter",
     "pytest",
     "pep8",
-    "black"
+    "black",
 ]
