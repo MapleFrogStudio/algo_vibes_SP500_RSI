@@ -29,7 +29,7 @@ def yahoo_minute_prices(tickers):
     if len(tickers) <= 1:
         return None
     
-    data = yf.download(tickers, interval="1m", period='max')
+    data = yf.download(tickers, period='1d', interval="1m", ignore_tz = True, prepost=False)
     data = data.loc[(slice(None)),(slice(None),slice(None))].copy()
     data = data.stack()
     data = data.reset_index()
